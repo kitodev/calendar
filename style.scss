@@ -1,0 +1,121 @@
+@import "mixins.scss";
+
+$body-bg-color: #fff;
+$calendar-bg-color: #dfe4ea;
+$month-bg-color: #1e90ff;
+$month-color: #fff;
+$calendar-box-shadow-color: #ecf0f1; 
+$weekends-bg-color: #70a1ff;
+$weekends-color: #fff;
+$days-hover-bg: #fff;
+$days-color: #fff;
+
+body {
+    margin: 0;
+    font-family: "Lato", "sans-serif";
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: $body-bg-color;
+
+    .calendar {
+        margin: auto;
+        width: 600px;
+
+        background-color: $calendar-bg-color;
+        @include box-shadow(0px, 0px, 15px, $calendar-box-shadow-color);
+
+        .month {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            background-color: $month-bg-color;
+            color: $month-color;
+            padding: 0px 30px;
+        }
+
+        .weekends {
+            display: flex;
+            background-color: $weekends-bg-color;
+            padding: 7px 0px;
+            color: $weekends-color;
+
+            div {
+                width: 14.5%;
+                text-align:center;
+            }
+        }
+
+        .days {
+            display: flex;
+            flex-wrap: wrap;
+            font-weight: 300;
+            padding: 10px 0;
+            text-align:center;
+            color: #555;
+
+            div {
+                width: 14.28%;
+                margin-bottom:10px;
+                padding: 10px 0;
+                transition: all 0.4s;
+
+                &:hover {
+                    background-color: $days-hover-bg;
+                    color: #5352ed;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .today {
+            background-color:#70a1ff;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .is-wekeend {
+            color: red;
+        }
+        
+        .prev_date {
+            color: #a4b0be;
+        }
+
+        #month {
+            font-size: 30px;
+        }
+
+        .prev,
+        .next {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 23px;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            transition: all 0.4s;
+        }
+
+        .prev,
+        .next {
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}

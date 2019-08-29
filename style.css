@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: "Lato", "sans-serif";
+}
+
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.wrapper .calendar {
+  margin: auto;
+  width: 600px;
+  background-color: #dfe4ea;
+  -webkit-box-shadow: 0px 0px 15px #ecf0f1;
+          box-shadow: 0px 0px 15px #ecf0f1;
+}
+
+.wrapper .calendar .month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 0px 30px;
+}
+
+.wrapper .calendar .weekends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #70a1ff;
+  padding: 7px 0px;
+  color: #fff;
+}
+
+.wrapper .calendar .weekends div {
+  width: 14.5%;
+  text-align: center;
+}
+
+.wrapper .calendar .days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-weight: 300;
+  padding: 10px 0;
+  text-align: center;
+  color: #555;
+}
+
+.wrapper .calendar .days div {
+  width: 14.28%;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.wrapper .calendar .days div:hover {
+  background-color: #fff;
+  color: #5352ed;
+  cursor: pointer;
+}
+
+.wrapper .calendar .today {
+  background-color: #70a1ff;
+  color: #fff;
+  font-weight: 600;
+}
+
+.wrapper .calendar .is-wekeend {
+  color: red;
+}
+
+.wrapper .calendar .prev_date {
+  color: #a4b0be;
+}
+
+.wrapper .calendar #month {
+  font-size: 30px;
+}
+
+.wrapper .calendar .prev,
+.wrapper .calendar .next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 23px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.wrapper .calendar .prev:hover,
+.wrapper .calendar .next:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=style.css.map */
